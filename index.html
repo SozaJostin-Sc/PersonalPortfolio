@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jostin Soza | Developer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!--======CABECERA=========-->
+    <header>
+      <div class="container">
+        <h1 class="logo">Jostin Soza</h1>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="projects.html" >More Projects</a></li>
+        </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main class="container main-grid">
+      <!-- Columna izquierda: Presentación -->
+      <section class="presentation-column">
+        <div class="presentation-content">
+          <h3 class="greeting">Hello <span class="wave">👋</span></h3>
+          <h1 class="name-title">I'm <span class="highlight">Jostin Soza</span></h1>
+          <h2 class="subtitle">Backend Developer</h2>
+          <p class="description">
+            I build efficient backend systems and scalable APIs using Java and Spring Framework. 
+            Focused on clean architecture and reliable solutions.
+          </p>
+          <ul class="contact">
+            <li>
+              <a href="https://github.com/SozaJostin-Sc" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/jostin-soza/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:jostinsoza08@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+          <button class="resumeBtn" ><a href="docs/CV-EN.pdf" download>Download Resume</a></button>
+        </div>
+      </section>
+      
+      <!-- Columna derecha: Skills y Projects -->
+      <section class="content-column">
+        <section class="skills" id="skills">
+          <h2>Core Skills</h2>
+          <div class="skills-container">
+            <ul class="skills-list">
+              <li>
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+              </li>
+              <li>
+                <i class="fas fa-leaf"></i>
+                <span>Spring Framework</span>
+              </li>
+              <li>
+                <i class="fas fa-database"></i>
+                <span>PostgreSQL</span>
+              </li>
+              <li>
+                <i class="fas fa-code-branch"></i>
+                <span>Git / GitHub</span>
+              </li>
+              <li>
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </li>
+              <li>
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </li>
+              <li>
+                <i class="fab fa-html5"></i>
+                <span>HTML / CSS</span>
+              </li>
+              <li>
+                <i class="fas fa-plug"></i>
+                <span>REST APIs</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        
+        <section class="projects-section" id="projects">
+          <h2>Projects</h2>
+          <div class="project-container">
+            <div class="project">
+              <div class="name-date">
+                <h3>Medical Appoinment Manager</h3>
+                <span class="date">2025 - Current</span>
+              </div>
+              <div class="project-technologies">
+                <ul>
+                  <li>Java</li>
+                  <li>Spring Boot</li>
+                  <li>Spring Security</li>
+                  <li>PostgreSQL</li>
+                  <li>Docker</li>
+                </ul>
+              </div>
+              <p class="project-description">
+                Microservices-based e-commerce platform with authentication, product management, 
+                and payment integration.
+              </p>
+              <div class="project-buttons">
+                <button class="code-btn">View Code</button>
+              </div>
+            </div>
+            
+            <div class="project">
+              <div class="name-date">
+                <h3>Library Management System</h3>
+                <span class="date">2025</span>
+              </div>
+              <div class="project-technologies">
+                <ul>
+                  <li>Java</li>
+                  <li>Spring Boot</li>
+                  <li>Spring MVC</li>
+                    <li>Swagger UI</li>
+                  <li>PostgreSQL</li>
+                </ul>
+              </div>
+              <p class="project-description">
+                A RESTful API for managing a library system, built with Spring Boot. It includes features for handling books, authors, categories, customers, loans, and returns. 
+              </p>
+              <div class="project-buttons">
+                <button class="code-btn"><a href="https://github.com/SozaJostin-Sc/library_api" target="_blank">View Code</a></button>
+              </div>
+            </div>
+            
+            <button class="moreProjectsBtn"><a href="projects.html">More Projects</a></button>
+          </div>
+        </section>
+      </section>
+    </main>
+    
+    <footer>
+      <div class="container">
+        <p class="copyright">© 2023 Jostin Soza. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="https://github.com/SozaJostin-Sc" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/jostin-soza/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:jostinsoza08@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="js/script.js"></script>
+  </body>
+</html>
