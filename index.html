@@ -15,18 +15,26 @@
     />
   </head>
   <body>
-    <!--======CABECERA=========-->
     <header>
       <div class="container">
-        <h1 class="logo">Jostin Soza</h1>
+        <a href="index.html" class="logo">Jostin Soza</a>
         <button class="menu-toggle" aria-label="Toggle menu">
           <i class="fas fa-bars"></i>
         </button>
         <nav>
           <ul class="nav-links">
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="projects.html">More Projects</a></li>
+            <li><a href="#skills" data-en="Skills" data-es="Habilidades">Skills</a></li>
+            <li><a href="#experience" data-en="Experience" data-es="Experiencia">Experience</a></li>
+            <li><a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a></li>
+            <li><a href="projects.html" data-en="More Projects" data-es="Más Proyectos">More Projects</a></li>
+            <li class="nav-icons-container">
+              <button class="icon-btn theme-toggle" aria-label="Toggle Theme" title="Toggle Theme">
+                <i class="fas fa-sun"></i>
+              </button>
+              <button class="icon-btn lang-toggle" aria-label="Translate" title="Switch Language">
+                <i class="fas fa-language"></i>
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -36,15 +44,15 @@
       <!-- Columna izquierda: Presentación -->
       <section class="presentation-column">
         <div class="presentation-content">
-          <h3 class="greeting">Hello <span class="wave">👋</span></h3>
+          <h3 class="greeting">
+            <span data-en="Hello" data-es="Hola">Hello</span> <span class="wave">👋</span>
+          </h3>
           <h1 class="name-title">
-            I'm <span class="highlight">Jostin Soza</span>
+            <span data-en="I'm" data-es="Soy">I'm</span> <span class="highlight">Jostin Soza</span>
           </h1>
-          <h2 class="subtitle">Backend Developer</h2>
-          <p class="description">
-            I build efficient backend systems and scalable APIs using Java and
-            Spring Framework. Focused on clean architecture and reliable
-            solutions.
+          <h2 class="subtitle" data-en="Full-Stack / Mobile Developer" data-es="Desarrollador Junior Full-Stack / Mobile">Full-Stack / Mobile Developer</h2>
+          <p class="description" data-en="Focused during 2026 on the agile development of modern mobile and web applications, with a solid previous foundation in programming logic and development environments." data-es="Especializándome durante este 2026 en el desarrollo ágil de aplicaciones móviles y web modernas, con una base sólida previa en lógica de programación y entornos de desarrollo.">
+            Focused during 2026 on the agile development of modern mobile and web applications, with a solid previous foundation in programming logic and development environments.
           </p>
           <ul class="contact">
             <li>
@@ -72,7 +80,7 @@
             </li>
           </ul>
           <button class="resumeBtn">
-            <a href="docs/CV-EN.pdf" download>Download Resume</a>
+            <a href="docs/CV-EN.pdf" download data-en="Download Resume" data-es="Descargar CV">Download Resume</a>
           </button>
         </div>
       </section>
@@ -80,122 +88,185 @@
       <!-- Columna derecha: Skills y Projects -->
       <section class="content-column">
         <section class="skills" id="skills">
-          <h2>Core Skills</h2>
+          <h2 data-en="Tech Stack" data-es="Tecnologías">Tech Stack</h2>
           <div class="skills-container">
-            <ul class="skills-list">
+            <ul class="skills-list minimalist-skills">
               <li>
-                <i class="fab fa-java"></i>
-                <span>Java</span>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div class="skill-text">
+                  <span class="skill-name">Flutter & Dart</span>
+                  <span class="skill-desc" data-en="Cross-platform Apps" data-es="Apps Multiplataforma">Cross-platform Apps</span>
+                </div>
               </li>
               <li>
-                <i class="fas fa-leaf"></i>
-                <span>Spring Framework</span>
+                <i class="fab fa-react"></i>
+                <div class="skill-text">
+                  <span class="skill-name">Next.js & React</span>
+                  <span class="skill-desc" data-en="Dynamic Websites" data-es="Webs Dinámicas">Dynamic Websites</span>
+                </div>
               </li>
               <li>
-                <i class="fas fa-database"></i>
-                <span>PostgreSQL</span>
+                <i class="fas fa-bolt"></i>
+                <div class="skill-text">
+                  <span class="skill-name">Supabase</span>
+                  <span class="skill-desc" data-en="BaaS / Auth" data-es="BaaS / Auth">BaaS / Auth</span>
+                </div>
               </li>
               <li>
-                <i class="fas fa-code-branch"></i>
-                <span>Git / GitHub</span>
+                <i class="fa-brands fa-node-js"></i>
+                <div class="skill-text">
+                  <span class="skill-name">NestJS & TS</span>
+                  <span class="skill-desc" data-en="Scalable APIs" data-es="APIs Escalables">Scalable APIs</span>
+                </div>
               </li>
               <li>
-                <i class="fab fa-docker"></i>
-                <span>Docker</span>
+                <i class="fa-solid fa-database"></i>
+                <div class="skill-text">
+                  <span class="skill-name">PostgreSQL</span>
+                  <span class="skill-desc" data-en="Relational DBs" data-es="Bases de Datos">Relational DBs</span>
+                </div>
               </li>
               <li>
-                <i class="fab fa-js"></i>
-                <span>JavaScript</span>
+                <i class="fa-brands fa-linux"></i>
+                <div class="skill-text">
+                  <span class="skill-name">Linux</span>
+                  <span class="skill-desc" data-en="OS & Servers" data-es="Sistemas y Servidores">OS & Servers</span>
+                </div>
               </li>
               <li>
-                <i class="fab fa-html5"></i>
-                <span>HTML / CSS</span>
+                <i class="fa-brands fa-java"></i>
+                <div class="skill-text">
+                  <span class="skill-name">Java</span>
+                  <span class="skill-desc" data-en="Object-Oriented" data-es="Orientado a Objetos">Object-Oriented</span>
+                </div>
               </li>
               <li>
-                <i class="fas fa-plug"></i>
-                <span>REST APIs</span>
+                <i class="fa-brands fa-envira"></i>
+                <div class="skill-text">
+                  <span class="skill-name">Spring Boot</span>
+                  <span class="skill-desc" data-en="Enterprise APIs" data-es="APIs Empresariales">Enterprise APIs</span>
+                </div>
               </li>
             </ul>
           </div>
         </section>
 
+        <section class="experience" id="experience">
+          <h2 data-en="Experience" data-es="Experiencia Laboral">Experience</h2>
+          <div class="experience-container">
+            <div class="experience-item">
+              <div class="experience-header">
+                <h3 class="experience-role" data-en="Flutter + NestJS Developer" data-es="Desarrollador Flutter + NestJS">Flutter + NestJS Developer</h3>
+                <span class="experience-date" data-en="Feb 2026 - Present" data-es="Feb 2026 - Presente">Feb 2026 - Present</span>
+              </div>
+              <h4 class="experience-company">AG Software S.A</h4>
+            </div>
+          </div>
+        </section>
+
         <section class="projects-section" id="projects">
-          <h2>Projects</h2>
-          <div class="project-container">
-            <div class="project">
-              <div class="name-date">
-                <h3>Medical Appoinment Manager</h3>
-                <span class="date">2025 - Current</span>
+          <h2 data-en="Featured Projects" data-es="Proyectos Destacados">Featured Projects</h2>
+          <div class="project-container minimalist-projects">
+            
+            <!-- HappySoul Store Case Study -->
+            <div class="case-study-card">
+              <div class="case-study-header">
+                <h3 class="case-study-title">HappySoul Store</h3>
+                <span class="case-study-type" data-en="Web & Mobile Platform" data-es="Plataforma Web y Móvil">Web & Mobile Platform</span>
               </div>
-              <div class="project-technologies">
-                <ul>
-                  <li>Java</li>
-                  <li>Spring Boot</li>
-                  <li>Spring Security</li>
-                  <li>PostgreSQL</li>
-                  <li>Docker</li>
-                </ul>
+              
+              <div class="case-study-body">
+                <div class="case-study-section">
+                  <h4 data-en="The Challenge" data-es="El Problema">The Challenge</h4>
+                  <p data-en="Needed a solid, fast, and efficient web presence." data-es="Necesitaba una presencia web sólida, rápida y eficiente.">Needed a solid, fast, and efficient web presence.</p>
+                </div>
+                
+                <div class="case-study-section">
+                  <h4 data-en="The Solution" data-es="La Solución">The Solution</h4>
+                  <ul class="case-study-list">
+                    <li><span class="highlight-text">Next.js</span> <span data-en="for a fast, SEO-optimized web frontend." data-es="para garantizar velocidad y un buen SEO en la web.">for a fast, SEO-optimized web frontend.</span></li>
+                    <li><span class="highlight-text">Supabase</span> <span data-en="as the BaaS engine (Database, Auth, Storage)." data-es="como el motor de la aplicación (Base de datos, autenticación y almacenamiento).">as the BaaS engine (Database, Auth, Storage).</span></li>
+                    <li><span class="highlight-text">Flutter</span> <span data-en="to expand the solution into a cross-platform mobile experience." data-es="para expandir la solución hacia una experiencia móvil multiplataforma.">to expand the solution into a cross-platform mobile experience.</span></li>
+                  </ul>
+                </div>
+                
+                <div class="case-study-section">
+                  <h4 data-en="The Impact" data-es="El Logro">The Impact</h4>
+                  <p data-en="Built a complete modern ecosystem connecting web and mobile." data-es="Creé un ecosistema moderno completo conectando web y móvil.">Built a complete modern ecosystem connecting web and mobile.</p>
+                </div>
               </div>
-              <p class="project-description">
-                A robust and secure RESTful API built with Spring Boot for
-                comprehensive management of medical appointments. This system
-                features multi-role access control, ensuring proper
-                authorization for patients, doctors, and administrators.
-                Security is enforced using Spring Security, providing strong
-                authentication and protecting all core endpoints.
-              </p>
+              
               <div class="project-buttons">
-                <button class="code-btn">
-                  <a
-                    href="https://github.com/SozaJostin-Sc/Appointment-management-system"
-                    target="_blank"
-                    >View Code</a
-                  >
+                <button class="demo-btn case-study-btn">
+                  <a href="https://happysoul-store.vercel.app/" target="_blank" data-en="View Live Project" data-es="Ver Proyecto en Vivo">View Live Project</a>
                 </button>
               </div>
             </div>
 
-            <div class="project">
-              <div class="name-date">
-                <h3>Library Management System</h3>
-                <span class="date">2025</span>
+            <!-- Java APIs Minimalist Cards -->
+            <div class="minimalist-grid" style="width: 100%; max-width: 800px; margin-top: 20px;">
+              
+              <div class="minimalist-project-card">
+                <div class="minimalist-card-header">
+                  <i class="fas fa-stethoscope project-icon-mini"></i>
+                  <h3>Medical Appointment API</h3>
+                  <span class="project-date">2025</span>
+                </div>
+                <div class="project-technologies">
+                  <ul>
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>PostgreSQL</li>
+                  </ul>
+                </div>
+                <p class="project-description" data-en="Secure RESTful API for appointment scheduling and multi-role management." data-es="API RESTful segura para la programación de citas y gestión de múltiples roles.">
+                  Secure RESTful API for appointment scheduling and multi-role management.
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/SozaJostin-Sc/Appointment-management-system" class="code-btn" target="_blank">
+                    <i class="fab fa-github"></i> <span data-en="Code" data-es="Código">Code</span>
+                  </a>
+                </div>
               </div>
-              <div class="project-technologies">
-                <ul>
-                  <li>Java</li>
-                  <li>Spring Boot</li>
-                  <li>Spring MVC</li>
-                  <li>Swagger UI</li>
-                  <li>PostgreSQL</li>
-                </ul>
+
+              <div class="minimalist-project-card">
+                <div class="minimalist-card-header">
+                  <i class="fas fa-book project-icon-mini"></i>
+                  <h3>Library Management API</h3>
+                  <span class="project-date">2025</span>
+                </div>
+                <div class="project-technologies">
+                  <ul>
+                    <li>Java</li>
+                    <li>Spring Boot</li>
+                    <li>PostgreSQL</li>
+                  </ul>
+                </div>
+                <p class="project-description" data-en="RESTful API handling books, authors, loans, and returns operations." data-es="API RESTful que maneja operaciones de libros, autores, préstamos y devoluciones.">
+                  RESTful API handling books, authors, loans, and returns operations.
+                </p>
+                <div class="project-links">
+                  <a href="https://github.com/SozaJostin-Sc/library_api" class="code-btn" target="_blank">
+                    <i class="fab fa-github"></i> <span data-en="Code" data-es="Código">Code</span>
+                  </a>
+                </div>
               </div>
-              <p class="project-description">
-                A RESTful API for managing a library system, built with Spring
-                Boot. It includes features for handling books, authors,
-                categories, customers, loans, and returns.
-              </p>
-              <div class="project-buttons">
-                <button class="code-btn">
-                  <a
-                    href="https://github.com/SozaJostin-Sc/library_api"
-                    target="_blank"
-                    >View Code</a
-                  >
-                </button>
-              </div>
+
             </div>
 
-            <button class="moreProjectsBtn">
-              <a href="projects.html">More Projects</a>
+            <!-- More Projects Button -->
+            <button class="moreProjectsBtn" style="margin-top: 30px;">
+              <a href="projects.html" data-en="Explore More Projects" data-es="Explorar Más Proyectos">Explore More Projects</a>
             </button>
           </div>
         </section>
+
       </section>
     </main>
 
     <footer>
       <div class="container">
-        <p class="copyright">© 2023 Jostin Soza. All rights reserved.</p>
+        <p class="copyright" data-en="© 2026 Jostin Soza. All rights reserved." data-es="© 2026 Jostin Soza. Todos los derechos reservados.">© 2026 Jostin Soza. All rights reserved.</p>
         <div class="footer-links">
           <a href="https://github.com/SozaJostin-Sc" target="_blank"
             ><i class="fab fa-github"></i

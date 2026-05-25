@@ -1,4 +1,3 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
   // Manejar el menú hamburguesa
   const menuToggle = document.querySelector('.menu-toggle');
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Cerrar menú al hacer clic en un enlace
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', function() {
         nav.classList.remove('mobile-open');
@@ -38,10 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Smooth scrolling for anchor links
   if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
+        if (this.classList.contains('lang-toggle')) return; // Ignore lang toggle
         e.preventDefault();
         
         const targetId = this.getAttribute('href');
@@ -60,7 +58,65 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+
+  // Translation Logic
+  let currentLang = 'en'; // Default language
+  const langToggleBtn = document.querySelector('.lang-toggle');
+  const translatableElements = document.querySelectorAll('[data-en][data-es]');
+
+  function updateLanguage(lang) {
+    translatableElements.forEach(el => {
+      el.innerHTML = el.getAttribute(`data-${lang}`);
+    });
+    if (langToggleBtn) {
+      langToggleBtn.setAttribute('title', lang === 'en' ? 'Switch to Spanish' : 'Switch to English');
+    }
+  }
+
+  if (langToggleBtn) {
+    langToggleBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      currentLang = currentLang === 'en' ? 'es' : 'en';
+      updateLanguage(currentLang);
+    });
+  }
   
+  // Set initial language
+  updateLanguage(currentLang);
 
+  // Theme Toggle Logic
+  const themeToggleBtn = document.querySelector('.theme-toggle');
+  const body = document.body;
+  
+  // Set initial theme from localStorage
+  const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+  applyTheme(savedTheme);
 
+  function applyTheme(theme) {
+    const icon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
+    if (theme === 'light') {
+      body.classList.add('light-theme');
+      if (icon) {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+      if (themeToggleBtn) themeToggleBtn.setAttribute('title', 'Toggle Dark Theme');
+    } else {
+      body.classList.remove('light-theme');
+      if (icon) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      }
+      if (themeToggleBtn) themeToggleBtn.setAttribute('title', 'Toggle Light Theme');
+    }
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const newTheme = body.classList.contains('light-theme') ? 'dark' : 'light';
+      localStorage.setItem('portfolio-theme', newTheme);
+      applyTheme(newTheme);
+    });
+  }
 });
