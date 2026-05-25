@@ -1173,7 +1173,7 @@ footer .container {
 /* Minimalist Projects Grid (projects.html) */
 .minimalist-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
 }
 
@@ -1212,6 +1212,11 @@ footer .container {
 }
 
 @media (max-width: 768px) {
+  .minimalist-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .case-study-card {
     padding: 25px;
   }
