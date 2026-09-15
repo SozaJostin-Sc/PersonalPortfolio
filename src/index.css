@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #232323;
+  --color-soft: #2b2b2b;
+  --color-primary: #64ffda;
+  --color-secondary: #ffeda3;
+  --color-content: #ffffff;
+  --color-muted: #e0e0e0;
+  --color-faint: #b0b0b0;
+  --color-line: #3a3a3a;
+
+  --font-sans: "Manrope", "Inter", system-ui, sans-serif;
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-mono: "JetBrains Mono", "Roboto Mono", monospace;
+}
+
+.light-theme {
+  --color-background: #f6f7f9;
+  --color-soft: #ffffff;
+  --color-primary: #0d9488;
+  --color-secondary: #d9a441;
+  --color-content: #1d232b;
+  --color-muted: #495057;
+  --color-faint: #6c757d;
+  --color-line: #e2e6ea;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background);
+    color: var(--color-content);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-line);
+    border-radius: 999px;
+    border: 2px solid var(--color-background);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@utility animate-wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+}
+
+@utility animate-pop {
+  animation: pop 0.35s ease;
+}
