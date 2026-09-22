@@ -4,7 +4,10 @@ export const SOCIAL = {
   email: "mailto:jostinsoza08@gmail.com",
 };
 
-export const RESUME = "/docs/CV-EN.pdf";
+export const RESUME = {
+  en: "/docs/CV-EN.pdf",
+  es: "/docs/CV-SP.pdf",
+};
 
 export const PROJECT_LINKS = {
   happysoul: "https://happysoul-store.vercel.app/",

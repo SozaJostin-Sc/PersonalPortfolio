@@ -1,6 +1,6 @@
 import { useApp } from "../../context/AppContext.jsx";
 import { resolvePath, translations } from "../../i18n.js";
-import { SOCIAL } from "../../data.js";
+import { RESUME, SOCIAL } from "../../data.js";
 
 export default function Presentation() {
   const { lang } = useApp();
@@ -58,6 +58,14 @@ export default function Presentation() {
             </a>
           </li>
         </ul>
+
+        <a
+          href={RESUME[lang]}
+          download
+          className="inline-block cursor-pointer rounded-full bg-gradient-to-r from-secondary to-secondary/80 px-[35px] py-[14px] text-center text-base font-medium text-black no-underline transition-all duration-200 hover:-translate-y-[2px] hover:shadow-[0_8px_24px_-8px] hover:shadow-secondary/60 max-[400px]:px-[28px] max-[400px]:py-3 max-[400px]:text-sm"
+        >
+          {t("home.downloadResume")}
+        </a>
       </div>
     </section>
   );
